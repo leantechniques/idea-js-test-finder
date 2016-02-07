@@ -61,4 +61,5 @@ public class CreateJsTestFileAction extends CreateFileFromTemplateAction impleme
         return obj instanceof CreateJsTestFileAction;
     }
 
+
 }

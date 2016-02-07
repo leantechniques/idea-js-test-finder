@@ -13,10 +13,14 @@
  */
 package co.leantechniques.js.test.finder;
 
+import com.intellij.psi.PsiFile;
+
 import java.util.Collection;
 
 public interface FilenameExtensionFactory {
     Collection<String> getProductionFileExtensions();
 
     Collection<String> getTestFileExtensions();
+
+    boolean isProductionFile(PsiFile psiFile);
 }

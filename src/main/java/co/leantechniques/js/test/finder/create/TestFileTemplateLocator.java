@@ -24,6 +24,10 @@ import java.util.Collection;
 public class TestFileTemplateLocator {
     private ServiceManagerProxy serviceManagerProxy = new ServiceManagerProxy();
 
+    public boolean hasNoTestTemplates(Project project) {
+        return locate(project).isEmpty();
+    }
+
     public Collection<FileTemplate> locate(Project project) {
         Collection<String> testFileExtensions = serviceManagerProxy.get(project, FilenameExtensionFactory.class).getTestFileExtensions();
 

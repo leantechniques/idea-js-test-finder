@@ -63,6 +63,11 @@ public class MockPsiFile implements PsiFileEx {
     }
 
     @Override
+    public void markInvalidated() {
+
+    }
+
+    @Override
     public VirtualFile getVirtualFile() {
         return null;
     }

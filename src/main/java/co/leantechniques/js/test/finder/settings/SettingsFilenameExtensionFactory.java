@@ -14,6 +14,7 @@
 package co.leantechniques.js.test.finder.settings;
 
 import co.leantechniques.js.test.finder.FilenameExtensionFactory;
+import com.intellij.psi.PsiFile;
 
 import java.util.Collection;
 
@@ -32,5 +33,16 @@ public class SettingsFilenameExtensionFactory implements FilenameExtensionFactor
     @Override
     public Collection<String> getTestFileExtensions() {
         return settingsRepository.getTestExtensions();
+    }
+
+    @Override
+    public boolean isProductionFile(PsiFile psiFile) {
+        Collection<String> prodSuffixes = getProductionFileExtensions();
+        for (String prodSuffix : prodSuffixes) {
+            if (psiFile.getContainingFile().getName().endsWith(prodSuffix)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
