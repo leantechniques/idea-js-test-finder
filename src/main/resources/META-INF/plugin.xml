@@ -56,7 +56,7 @@
     </extensions>
 
     <actions>
-        <action id="NewJsTestFile" class="co.leantechniques.js.test.finder.create.CreateJsTestFileAction">
+        <action id="NewJsTestFile" class="co.leantechniques.js.test.finder.create.NewCreateJsTestFileAction">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFromTemplate"/>
         </action>
     </actions>
